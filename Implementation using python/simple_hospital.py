@@ -4,13 +4,14 @@ Run: python simple_hospital.py
 Focus: classes, objects, inheritance, and appointment booking.
 """
 
-
-# 1. A parent class holds details shared by patients and doctors.
+#Person 1 start: Milkah 
+# 1. A parent class holds details shared by patients and doctors. 
 class Person:
     def __init__(self, name, phone):
         self.name = name
         self.phone = phone
-
+#person 1 stops : MILKAH 
+#Person 2 starts: Hope 
 
 # 2. Patient inherits name and phone from Person.
 class Patient(Person):
@@ -18,14 +19,17 @@ class Patient(Person):
         super().__init__(name, phone)
         self.medical_notes = []
 
-
+#Person 2 stops: Hope
+#Person 3Starts: Eric
 # 3. Doctor also inherits from Person and adds a specialization.
 class Doctor(Person):
     def __init__(self, name, phone, specialization):
         super().__init__(name, phone)
         self.specialization = specialization
 
+        #Person 3: stops: Eric 
 
+#Person 4: Starts: Milin
 # 4. An appointment connects one patient to one doctor.
 class Appointment:
     def __init__(self, patient, doctor, time):
@@ -45,8 +49,8 @@ class Appointment:
         self.patient.medical_notes.append(notes)
         self.status = "Completed"
         print("Consultation saved in the patient's medical notes.")
-
-
+#Person 4 stops: Milin
+#person 5: Baraka 
 # 5. This function checks whether the doctor is already booked.
 def book_appointment(patient, doctor, time, appointments):
     for appointment in appointments:
@@ -59,8 +63,8 @@ def book_appointment(patient, doctor, time, appointments):
     appointments.append(appointment)
     print("Appointment booked successfully!")
     return appointment
-
-
+#Person 5 stops: Baraka
+#person 6 &7 start Person 6: Emmaneul Person 7 : Dennis
 # A repeatable demonstration that needs no typing of patient details.
 def run_demo():
     print("\n--- CLASS DEMONSTRATION ---")
